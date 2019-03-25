@@ -1,0 +1,18 @@
+{
+  "name": "vue-confirm-global-x",
+  "version": "1.0.0",
+  "description": "this is a global confirm for vue2.5",
+  "main": "confirm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "confirm",
+    "vueConfirm",
+    "vue-confirm-x",
+    "vue-confirm-global-x",
+    "vue-confirm"
+  ],
+  "author": "misterXu",
+  "license": "ISC"
+}

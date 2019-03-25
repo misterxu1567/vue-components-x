@@ -1,0 +1,17 @@
+{
+  "name": "vue-confirm-x",
+  "version": "1.1.0",
+  "description": "this is a confirm component for vue2.5",
+  "main": "index.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "confirm",
+    "vueConfirm",
+    "vue-confirm-x",
+    "vue-confirm"
+  ],
+  "author": "misterXu",
+  "license": "ISC"
+}
