@@ -33,14 +33,13 @@
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        padding: 0 20px;
+        padding: 8px 20px;
         box-sizing: border-box;
-        overflow: hidden;
-        height: 40px;
-        line-height: 40px;
+        height: auto;
+        line-height: 20px;
         border-radius: 4px;
         font-size: 14px;
-        min-width: 160px;
+        width: 200px;
         background: rgba(0, 0, 0, 0.6);
         color: #fff;
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
