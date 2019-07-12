@@ -23,7 +23,6 @@
         }
     }
 </script>
-
 <style>
     .toast {
         position: fixed;
@@ -39,70 +38,73 @@
         line-height: 20px;
         border-radius: 4px;
         font-size: 14px;
-        width: 200px;
+        min-width: 200px;
+        max-width: 400px;
         background: rgba(0, 0, 0, 0.6);
         color: #fff;
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
         text-align: center;
         z-index: 9999;
+        word-wrap:break-word;
+        white-space: pre-wrap;
     }
     /*展开动画*/
     @keyframes spreadFrame {
         0% {
-            height: 0px;
+            max-height: 0px;
         }
         5% {
-            height: 40px;
+            max-height: 500px;
         }
         95% {
-            height: 40px;
+            max-height: 50px;
         }
         100% {
-            height: 0px;
+            max-height: 0px;
         }
     }
 
     @-moz-keyframes spreadFrame {
         0% {
-            height: 0px;
+            max-height: 0px;
         }
         5% {
-            height: 40px;
+            max-height: 500px;
         }
         95% {
-            height: 40px;
+            max-height: 50px;
         }
         100% {
-            height: 0px;
+            max-height: 0px;
         }
     }
 
     @-webkit-keyframes spreadFrame {
         0% {
-            height: 0px;
+            max-height: 0px;
         }
         5% {
-            height: 40px;
+            max-height: 500px;
         }
         95% {
-            height: 40px;
+            max-height: 50px;
         }
         100% {
-            height: 0px;
+            max-height: 0px;
         }
     }
     @-ms-keyframes spreadFrame {
         0% {
-            height: 0px;
+            max-height: 0px;
         }
         5% {
-            height: 40px;
+            max-height: 500px;
         }
         95% {
-            height: 40px;
+            max-height: 50px;
         }
         100% {
-            height: 0px;
+            max-height: 0px;
         }
     }
 
