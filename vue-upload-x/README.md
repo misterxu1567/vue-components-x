@@ -64,5 +64,5 @@ npm install vue-upload-x --save-dev
 | maxlength            | `String`  | 1000         | 上传图片张数限制             |
 | multiple             | `Boolean` | false        | 是否允许多图上传             |
 | callbackDataType     | `String`  | base64       | 本地拿到图片数据的回调参数，支持 'formData' 或 'base64'             |
-| upload               | `Function`|              | 本地拿到图片数据的回调回调函数             |
+| upload               | `Function`|              | 本地拿到图片数据的回调函数             |
 | delete               | `Function`|              | 触发删除的回调函数             |
