@@ -18,7 +18,14 @@
         </div>
       </li>-->
       <li class="PicruresBtn iconfont icon-add" v-if="currentPicLength < maxlength">
-        <input type="file" class="PicruresFileInput" :accept="accept" :multiple="multiple" @change="uploadPicFn($event)" />
+        <input
+          type="file"
+          class="PicruresFileInput"
+          :webkitdirectory="directory"
+          :accept="accept"
+          :multiple="multiple"
+          @change="uploadPicFn($event)"
+        />
       </li>
     </ul>
     <div class="blackBg" :class="{'fade': previewBool}">
@@ -43,6 +50,11 @@ export default {
       type: String,
       required: false,
       default: "image/gif, image/jpeg, image/jpg, image/png" // 限制上传图片的格式
+    },
+    directory: {
+      type: Boolean,
+      required: false,
+      default: false // 支持文件夹上传
     },
     limit: {
       type: String,
@@ -107,7 +119,10 @@ export default {
           this.$toast(`上传图片大于${this.limit}M，请重新上传`, 3000);
           return false;
         }
-        formData.append("file", e.target.files[i]);
+        if (_this.accept.indexOf(file.files[i].type) >= 0 && file.files[i].type !== '') {
+          // 自动过滤类型不匹配的文件（在上传文件夹的时候用得到）
+          formData.append("file", e.target.files[i]);
+        }
       }
       if (this.callbackDataType === "formData") {
         // 回传数据
@@ -120,13 +135,21 @@ export default {
             reader[i] = new FileReader();
             reader[i].readAsDataURL(file.files[i]);
             reader[i].onload = function(evt) {
-              callbackData.push(evt.target.result);
+              let regexp = /data:(\S*);base64/;
+              let fileType = evt.target.result.match(regexp)[1];
+              if (_this.accept.indexOf(fileType) >= 0) {
+                // 自动过滤不匹配的文件（在上传文件夹的时候用得到）
+                callbackData.push(evt.target.result);
+              }
               resolve();
             };
           });
         }
-        Promise.all(promise).then(()=>{
-          this.$emit("upload", callbackData.length === 1 ? callbackData[0] : callbackData);
+        Promise.all(promise).then(() => {
+          this.$emit(
+            "upload",
+            callbackData.length === 1 ? callbackData[0] : callbackData
+          );
         });
       }
       file.value = null; // 清空重置
