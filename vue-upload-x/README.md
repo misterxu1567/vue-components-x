@@ -66,3 +66,7 @@ npm install vue-upload-x --save-dev
 | callbackDataType     | `String`  | base64       | 本地拿到图片数据的回调参数，支持 'formData' 或 'base64'             |
 | upload               | `Function`|              | 本地拿到图片数据的回调函数             |
 | delete               | `Function`|              | 触发删除的回调函数             |
+
+### 其他注意说明
+
+组件内的错误提示使用了 vue-toast-x 组件，故需要在全局安装此组件
