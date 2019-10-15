@@ -1,0 +1,24 @@
+{
+  "name": "vue-slider-x",
+  "version": "1.0.0",
+  "description": "this is a custom slider for vue2.5",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misterxu1567/vue-components-x/tree/master/vue-slider-x"
+  },
+  "bugs": {
+    "url": "https://github.com/misterxu1567/vue-components-x/issues"
+  },
+  "keywords": [
+    "slider",
+    "vueSlider",
+    "vue-slider-x",
+    "vue-slider"
+  ],
+  "author": "misterXu",
+  "license": "ISC"
+}
