@@ -1,7 +1,7 @@
 > 基于vue的自定义拖动条
 
-<br/><br/>
-<img src="https://raw.githubusercontent.com/misterxu1567/img-static/master/slider.png" alt="自定义拖动条" width="50">
+<br/>
+<img src="https://raw.githubusercontent.com/misterxu1567/img-static/master/slider.png" alt="自定义拖动条" width="100">
 
 ### NPM
 
