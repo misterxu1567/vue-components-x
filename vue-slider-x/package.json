@@ -1,7 +1,7 @@
 {
-  "name": "vue-slider-x",
+  "name": "@misterxu/vue-slider-x",
   "version": "1.0.0",
-  "description": "this is a custom slider for vue2.5",
+  "description": "this is a custom slider for vue",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

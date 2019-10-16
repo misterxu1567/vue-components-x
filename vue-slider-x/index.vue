@@ -6,7 +6,7 @@
     :max="max"
     :min="min"
     :value="value"
-    :style="{background: `linear-gradient(to right, #22d6af 0%, #22d6af ${value * 100 / max}%, #fff ${value * 100 / max}%, #fff)`}"
+    :style="{background: `linear-gradient(to right, ${color} 0%, ${color} ${value * 100 / max}%, #fff ${value * 100 / max}%, #fff)`}"
     @input="handleChange($event)"
   />
 </template>
@@ -24,6 +24,11 @@ export default {
       type: Number,
       required: false,
       default: 0
+    },
+    color: {
+      type: String,
+      required: false,
+      default: "#22d6af"
     },
     value: {
       type: Number,

@@ -1,9 +1,12 @@
 > 基于vue的自定义拖动条
 
+<br/><br/>
+<img src="https://raw.githubusercontent.com/misterxu1567/img-static/master/slider.png" alt="自定义拖动条" width="50">
+
 ### NPM
 
 ``` bash
-npm install vue-slider-x --save-dev
+npm install @misterxu/vue-slider-x --save-dev
 ```
 ### Example
 
@@ -17,7 +20,7 @@ npm install vue-slider-x --save-dev
 />
 
 // js
-import SliderVertical from "vue-slider-x";
+import SliderVertical from "@misterxu/vue-slider-x";
 
 export default {
   name: "",
@@ -46,6 +49,7 @@ export default {
 |----------------------|-----------|--------------|------------|
 | max                  | `Number`  |  100         | 最大值      |
 | min                  | `Number`  |   0          | 最小值      |
+| color                | `String`  |   #22d6af    | 拖动条颜色      |
 | type                 | `String`  | 默认为垂直     | horizontal => 水平       |
 
 
